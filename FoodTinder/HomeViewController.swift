@@ -12,6 +12,16 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let veggieNames: [String] = [
+        "carrot",
+        "cabbage",
+        "egg",
+        "peas",
+        "potato",
+        "cauliflower",
+        "broccoli"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,7 +32,15 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "veggieSegue"){
+            let ivc = segue.destination as! InfoViewController
+            if let cell = sender as? UICollectionViewCell, let indexPath = self.collectionView.indexPath(for: cell){
+                let veggieName = veggieNames[indexPath.row]
+                ivc.veggieName = veggieName
+            }
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {

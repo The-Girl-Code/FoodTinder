@@ -6,4 +6,15 @@
 //  Copyright © 2017 The Girl Code. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class InfoViewController: UIViewController {
+    
+    var veggieName = "ug"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(veggieName)
+    }
+    
+}
