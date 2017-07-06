@@ -91,16 +91,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-vq-6Xs">
-                                <rect key="frame" x="167" y="318" width="41" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-vq-6Xs">
+                                <rect key="frame" x="0.0" y="147" width="375" height="45.5"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="FLX-mI-1vz">
+                                <rect key="frame" x="70" y="242.5" width="235" height="18.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mft-NG-OoD">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="18.5"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButton:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="6mz-PT-mrB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-k2-gSo">
+                                        <rect key="frame" x="99" y="0.0" width="34" height="18.5"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startButton:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="zPf-me-07R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGb-EI-qM2">
+                                        <rect key="frame" x="193" y="0.0" width="42" height="18.5"/>
+                                        <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pauseButton:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="WcE-wy-IJ1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xwh-vq-6Xs" firstAttribute="leading" secondItem="ez4-2H-mlK" secondAttribute="leading" id="19M-nb-SAv"/>
+                            <constraint firstItem="8B6-CB-vS1" firstAttribute="top" secondItem="FLX-mI-1vz" secondAttribute="bottom" constant="406" id="7lO-dL-Xiv"/>
+                            <constraint firstAttribute="trailing" secondItem="Xwh-vq-6Xs" secondAttribute="trailing" id="XQQ-d4-nuC"/>
+                            <constraint firstItem="FLX-mI-1vz" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="bDE-Oq-Tn7"/>
+                            <constraint firstItem="FLX-mI-1vz" firstAttribute="top" secondItem="Xwh-vq-6Xs" secondAttribute="bottom" constant="50" id="gA2-Xc-vof"/>
+                            <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="83" id="x4f-7D-snu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="UGb-EI-qM2" id="iyZ-Va-raR"/>
+                        <outlet property="startButton" destination="XHg-k2-gSo" id="kaf-OS-A8K"/>
+                        <outlet property="timerLabel" destination="Xwh-vq-6Xs" id="rOF-ww-nIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99E-NA-GKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
