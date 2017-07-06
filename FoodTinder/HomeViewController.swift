@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,7 +39,9 @@ extension HomeViewController: UICollectionViewDataSource {
             UIImage(named: "cabbage")!,
             UIImage(named: "egg")!,
             UIImage(named: "peas")!,
-            UIImage(named: "potato")!
+            UIImage(named: "potato")!,
+            UIImage(named: "cauliflower")!,
+            UIImage(named: "broccoli")!
             ]
         
        // let image = UIImage(named: veggieImages[indexPath.row])
