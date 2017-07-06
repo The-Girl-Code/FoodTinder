@@ -8,8 +8,10 @@
 
 import UIKit
 
-class SwipeViewController: UIViewController {
+class HomeViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +21,52 @@ class SwipeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    // HI MY NAME IS ADITI AND I AM SETTING UP ANISHA'S GITHUB DESKTOP.
+    
+    
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VeggieCell", for: indexPath) as! VeggieCell
+        
+        let veggieImages: [UIImage] = [
+            UIImage(named: "carrot")!,
+            UIImage(named: "cabbage")!,
+            UIImage(named: "egg")!,
+            UIImage(named: "peas")!,
+            UIImage(named: "potato")!
+            ]
+        
+       // let image = UIImage(named: veggieImages[indexPath.row])
+        let image = veggieImages[indexPath.row]
+        cell.veggieImageView.image = image
+        return cell
+    }
 
 }
 
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let columns: CGFloat = 3
+        let spacing: CGFloat = 1.5
+        let totalHorizontalSpacing = (columns - 1) * spacing
+        
+        let itemWidth = (collectionView.bounds.width - totalHorizontalSpacing) / columns
+        let itemSize = CGSize(width: itemWidth, height: itemWidth)
+        
+        return itemSize
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1.5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1.5
+    }
+}
