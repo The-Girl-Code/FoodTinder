@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KDB-Wu-xtS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KDB-Wu-xtS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -123,14 +123,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akA-y5-E4r">
+                                <rect key="frame" x="67" y="308" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-6q-eUm">
+                                <rect key="frame" x="166" y="127" width="42" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="leading" secondItem="ez4-2H-mlK" secondAttribute="leading" id="19M-nb-SAv"/>
                             <constraint firstItem="8B6-CB-vS1" firstAttribute="top" secondItem="FLX-mI-1vz" secondAttribute="bottom" constant="406" id="7lO-dL-Xiv"/>
                             <constraint firstAttribute="trailing" secondItem="Xwh-vq-6Xs" secondAttribute="trailing" id="XQQ-d4-nuC"/>
+                            <constraint firstItem="akA-y5-E4r" firstAttribute="top" secondItem="XHg-k2-gSo" secondAttribute="bottom" constant="30" id="Y4l-2C-oYn"/>
                             <constraint firstItem="FLX-mI-1vz" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="bDE-Oq-Tn7"/>
                             <constraint firstItem="FLX-mI-1vz" firstAttribute="top" secondItem="Xwh-vq-6Xs" secondAttribute="bottom" constant="50" id="gA2-Xc-vof"/>
+                            <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="ssp-6q-eUm" secondAttribute="bottom" constant="20" id="wnL-Qe-yTk"/>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="83" id="x4f-7D-snu"/>
                         </constraints>
                     </view>
@@ -138,6 +149,8 @@
                         <outlet property="pauseButton" destination="UGb-EI-qM2" id="iyZ-Va-raR"/>
                         <outlet property="startButton" destination="XHg-k2-gSo" id="kaf-OS-A8K"/>
                         <outlet property="timerLabel" destination="Xwh-vq-6Xs" id="rOF-ww-nIn"/>
+                        <outlet property="veggieImageView" destination="akA-y5-E4r" id="bYF-xE-SlB"/>
+                        <outlet property="veggieLabel" destination="ssp-6q-eUm" id="PCF-6V-zUx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99E-NA-GKi" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,14 @@ class InfoViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     
+    var veggieName = "ug"
+    var veggieImage: UIImage!
+    var veggieTime = 0
+    
+    @IBOutlet weak var veggieImageView: UIImageView!
+    
+    @IBOutlet weak var veggieLabel: UILabel!
+    
     var seconds = 60
     var timer = Timer()
     var isTimerRunning = false
@@ -73,10 +81,11 @@ class InfoViewController: UIViewController {
         }
     }
     
-    var veggieName = "ug"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        veggieImageView.image = veggieImage
+        veggieLabel.text = veggieName
         print(veggieName)
         pauseButton.isEnabled = false
     }
