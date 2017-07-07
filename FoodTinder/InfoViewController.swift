@@ -99,7 +99,9 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func subtractOneMinute(_ sender: UIButton) {
-        seconds -= 60
+        if seconds > 0{
+            seconds -= 60
+        }
         timerLabel.text = timeString(time: TimeInterval(seconds))
     }
     
