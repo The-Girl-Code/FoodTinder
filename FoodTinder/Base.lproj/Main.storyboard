@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KDB-Wu-xtS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KDB-Wu-xtS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -127,7 +128,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="akA-y5-E4r">
-                                <rect key="frame" x="87" y="291" width="200" height="200"/>
+                                <rect key="frame" x="87" y="271" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="PgN-Sq-CtX"/>
                                     <constraint firstAttribute="height" constant="200" id="lv4-kp-lKW"/>
@@ -155,15 +156,32 @@
                                     <action selector="addOneMinute:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="Z1Q-PT-ryg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QY-2r-vLz">
+                                <rect key="frame" x="10" y="501" width="517" height="153"/>
+                                <string key="text">1. Peel and clean your vegetables.
+2. Cut your vegetables into uniform pieces. 
+3. Put your pieces of vegetable into a pot. 
+4. Fill your pot with cold water and a little salt, completely submerging your vegetables.
+5. Set your stovetop on high and bring the water to a boil. Start timer.
+6. Reduce the heat to a simmer, and cover your pot with the lid.
+7. Test if your vegetables are done by poking them with a fork. Add more time if they are not ready.
+8. Drain the pot of water.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="leading" secondItem="ez4-2H-mlK" secondAttribute="leading" id="19M-nb-SAv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8QY-2r-vLz" secondAttribute="trailing" constant="8" id="2EN-bb-bSm"/>
+                            <constraint firstItem="8QY-2r-vLz" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="2P7-KW-ctQ"/>
                             <constraint firstItem="8B6-CB-vS1" firstAttribute="top" secondItem="FLX-mI-1vz" secondAttribute="bottom" constant="406" id="7lO-dL-Xiv"/>
+                            <constraint firstItem="8QY-2r-vLz" firstAttribute="top" secondItem="akA-y5-E4r" secondAttribute="bottom" constant="10" id="L5n-yu-gy7"/>
                             <constraint firstItem="Tic-iC-KZV" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="90" id="Lqp-Vg-2y8"/>
                             <constraint firstItem="akA-y5-E4r" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="XMk-Q9-dII"/>
                             <constraint firstAttribute="trailing" secondItem="Xwh-vq-6Xs" secondAttribute="trailing" id="XQQ-d4-nuC"/>
-                            <constraint firstItem="akA-y5-E4r" firstAttribute="top" secondItem="XHg-k2-gSo" secondAttribute="bottom" constant="30" id="Y4l-2C-oYn"/>
+                            <constraint firstItem="akA-y5-E4r" firstAttribute="top" secondItem="XHg-k2-gSo" secondAttribute="bottom" constant="10" id="Y4l-2C-oYn"/>
                             <constraint firstItem="FLX-mI-1vz" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="bDE-Oq-Tn7"/>
                             <constraint firstItem="FLX-mI-1vz" firstAttribute="top" secondItem="Xwh-vq-6Xs" secondAttribute="bottom" constant="10" id="gA2-Xc-vof"/>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="leading" secondItem="Tic-iC-KZV" secondAttribute="trailing" constant="-54" id="h38-GX-YhQ"/>
@@ -172,6 +190,7 @@
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="ssp-6q-eUm" secondAttribute="bottom" constant="20" id="wnL-Qe-yTk"/>
                             <constraint firstItem="ssp-6q-eUm" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="wx0-6A-qtV"/>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="83" id="x4f-7D-snu"/>
+                            <constraint firstItem="8QY-2r-vLz" firstAttribute="leading" secondItem="ez4-2H-mlK" secondAttribute="leadingMargin" constant="8" id="yMV-ju-HWk"/>
                         </constraints>
                     </view>
                     <connections>

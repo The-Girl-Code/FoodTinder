@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UserNotifications
 class InfoViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -15,6 +15,7 @@ class InfoViewController: UIViewController {
     var veggieName = "ug"
     var veggieImage: UIImage!
     var veggieTime: Int = 0
+    
     
     @IBOutlet weak var veggieImageView: UIImageView!
     
@@ -74,8 +75,21 @@ class InfoViewController: UIViewController {
         pauseButton.isEnabled = false
     }
     
+
+    
     func updateTimer() {
         if seconds < 1 {
+            let content = UNMutableNotificationContent()
+            content.title = "Time's Up!"
+            content.subtitle = "Check your veggies!"
+            content.body = "Poke a fork in to test if they are soft."
+            content.badge = 1
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
             timer.invalidate()
             //Send alert to indicate "time's up!"
         } else {
