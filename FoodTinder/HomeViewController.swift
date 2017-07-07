@@ -11,12 +11,17 @@ import UIKit
 
 let veggieImages: [UIImage] = [
     UIImage(named: "carrot")!,
-    UIImage(named: "cabbage")!,
+    UIImage(named: "brusselsprouts")!,
     UIImage(named: "egg")!,
     UIImage(named: "peas")!,
     UIImage(named: "potato")!,
     UIImage(named: "cauliflower")!,
-    UIImage(named: "broccoli")!
+    UIImage(named: "sweet potato")!,
+    UIImage(named: "broccoli")!,
+    UIImage(named: "asparagus")!,
+    UIImage(named: "corn")!,
+    UIImage(named: "spinach")!,
+    UIImage(named: "cabbage")!
 ]
 
 class HomeViewController: UIViewController {
@@ -30,11 +35,17 @@ class HomeViewController: UIViewController {
         "Peas",
         "Potato",
         "Cauliflower",
-        "Broccoli"
+        "Sweet Potato",
+        "Broccoli",
+        "Asparagus",
+        "Corn",
+        "Spinach",
+        "Cabbage Wedge"
+        
     ]
     
     let veggieTimes: [Int] = [
-        7, 5, 12, 2, 15, 6, 4
+        7, 5, 12, 2, 15, 6, 10, 4, 5, 5, 4, 10
     ]
     
     override func viewDidLoad() {
@@ -67,7 +78,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

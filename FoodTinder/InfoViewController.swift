@@ -84,6 +84,13 @@ class InfoViewController: UIViewController {
         }
     }
     
+    @IBAction func subtractOneMinute(_ sender: UIButton) {
+    }
+    
+    @IBAction func addOneMinute(_ sender: UIButton) {
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

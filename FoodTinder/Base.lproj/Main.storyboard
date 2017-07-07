@@ -126,12 +126,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-6q-eUm">
-                                <rect key="frame" x="187" y="127" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="akA-y5-E4r">
                                 <rect key="frame" x="87" y="291" width="200" height="200"/>
                                 <constraints>
@@ -139,16 +133,42 @@
                                     <constraint firstAttribute="height" constant="200" id="lv4-kp-lKW"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-6q-eUm">
+                                <rect key="frame" x="187" y="127" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tic-iC-KZV">
+                                <rect key="frame" x="24" y="154" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="subtractOneMinute:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="quX-w1-Swh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxp-wx-XZ2">
+                                <rect key="frame" x="321" y="154" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addOneMinute:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="Z1Q-PT-ryg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="leading" secondItem="ez4-2H-mlK" secondAttribute="leading" id="19M-nb-SAv"/>
                             <constraint firstItem="8B6-CB-vS1" firstAttribute="top" secondItem="FLX-mI-1vz" secondAttribute="bottom" constant="406" id="7lO-dL-Xiv"/>
+                            <constraint firstItem="Tic-iC-KZV" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="90" id="Lqp-Vg-2y8"/>
                             <constraint firstItem="akA-y5-E4r" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="XMk-Q9-dII"/>
                             <constraint firstAttribute="trailing" secondItem="Xwh-vq-6Xs" secondAttribute="trailing" id="XQQ-d4-nuC"/>
                             <constraint firstItem="akA-y5-E4r" firstAttribute="top" secondItem="XHg-k2-gSo" secondAttribute="bottom" constant="30" id="Y4l-2C-oYn"/>
                             <constraint firstItem="FLX-mI-1vz" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="bDE-Oq-Tn7"/>
                             <constraint firstItem="FLX-mI-1vz" firstAttribute="top" secondItem="Xwh-vq-6Xs" secondAttribute="bottom" constant="10" id="gA2-Xc-vof"/>
+                            <constraint firstItem="Xwh-vq-6Xs" firstAttribute="leading" secondItem="Tic-iC-KZV" secondAttribute="trailing" constant="-54" id="h38-GX-YhQ"/>
+                            <constraint firstItem="fxp-wx-XZ2" firstAttribute="leading" secondItem="Xwh-vq-6Xs" secondAttribute="trailing" constant="-54" id="p5c-Rg-FcB"/>
+                            <constraint firstItem="fxp-wx-XZ2" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="90" id="sdf-3V-E26"/>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="ssp-6q-eUm" secondAttribute="bottom" constant="20" id="wnL-Qe-yTk"/>
                             <constraint firstItem="ssp-6q-eUm" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="wx0-6A-qtV"/>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="83" id="x4f-7D-snu"/>
