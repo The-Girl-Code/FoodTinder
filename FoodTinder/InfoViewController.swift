@@ -85,9 +85,13 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func subtractOneMinute(_ sender: UIButton) {
+        seconds -= 60
+        updateTimer()
     }
     
     @IBAction func addOneMinute(_ sender: UIButton) {
+        seconds += 60
+        updateTimer()
     }
     
     
