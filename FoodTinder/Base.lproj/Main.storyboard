@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KDB-Wu-xtS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KDB-Wu-xtS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -98,24 +98,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="FLX-mI-1vz">
-                                <rect key="frame" x="70" y="242.5" width="235" height="18.5"/>
+                                <rect key="frame" x="49.5" y="202.5" width="276" height="58.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mft-NG-OoD">
-                                        <rect key="frame" x="0.0" y="0.0" width="39" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="58.5"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
                                             <action selector="resetButton:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="6mz-PT-mrB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-k2-gSo">
-                                        <rect key="frame" x="99" y="0.0" width="34" height="18.5"/>
+                                        <rect key="frame" x="112" y="0.0" width="52" height="58.5"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
                                             <action selector="startButton:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="zPf-me-07R"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGb-EI-qM2">
-                                        <rect key="frame" x="193" y="0.0" width="42" height="18.5"/>
+                                        <rect key="frame" x="224" y="0.0" width="52" height="58.5"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                         <state key="normal" title="Pause"/>
                                         <connections>
                                             <action selector="pauseButton:" destination="opJ-WO-Zxa" eventType="touchUpInside" id="WcE-wy-IJ1"/>
@@ -123,25 +126,31 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akA-y5-E4r">
-                                <rect key="frame" x="67" y="308" width="240" height="128"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-6q-eUm">
-                                <rect key="frame" x="166" y="127" width="42" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-6q-eUm">
+                                <rect key="frame" x="187" y="127" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="akA-y5-E4r">
+                                <rect key="frame" x="87" y="291" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PgN-Sq-CtX"/>
+                                    <constraint firstAttribute="height" constant="200" id="lv4-kp-lKW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="leading" secondItem="ez4-2H-mlK" secondAttribute="leading" id="19M-nb-SAv"/>
                             <constraint firstItem="8B6-CB-vS1" firstAttribute="top" secondItem="FLX-mI-1vz" secondAttribute="bottom" constant="406" id="7lO-dL-Xiv"/>
+                            <constraint firstItem="akA-y5-E4r" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="XMk-Q9-dII"/>
                             <constraint firstAttribute="trailing" secondItem="Xwh-vq-6Xs" secondAttribute="trailing" id="XQQ-d4-nuC"/>
                             <constraint firstItem="akA-y5-E4r" firstAttribute="top" secondItem="XHg-k2-gSo" secondAttribute="bottom" constant="30" id="Y4l-2C-oYn"/>
                             <constraint firstItem="FLX-mI-1vz" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="bDE-Oq-Tn7"/>
-                            <constraint firstItem="FLX-mI-1vz" firstAttribute="top" secondItem="Xwh-vq-6Xs" secondAttribute="bottom" constant="50" id="gA2-Xc-vof"/>
+                            <constraint firstItem="FLX-mI-1vz" firstAttribute="top" secondItem="Xwh-vq-6Xs" secondAttribute="bottom" constant="10" id="gA2-Xc-vof"/>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="ssp-6q-eUm" secondAttribute="bottom" constant="20" id="wnL-Qe-yTk"/>
+                            <constraint firstItem="ssp-6q-eUm" firstAttribute="centerX" secondItem="ez4-2H-mlK" secondAttribute="centerX" id="wx0-6A-qtV"/>
                             <constraint firstItem="Xwh-vq-6Xs" firstAttribute="top" secondItem="Frk-vU-3IY" secondAttribute="bottom" constant="83" id="x4f-7D-snu"/>
                         </constraints>
                     </view>

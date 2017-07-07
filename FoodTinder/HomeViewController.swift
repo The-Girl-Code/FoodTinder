@@ -8,18 +8,33 @@
 
 import UIKit
 
+
+let veggieImages: [UIImage] = [
+    UIImage(named: "carrot")!,
+    UIImage(named: "cabbage")!,
+    UIImage(named: "egg")!,
+    UIImage(named: "peas")!,
+    UIImage(named: "potato")!,
+    UIImage(named: "cauliflower")!,
+    UIImage(named: "broccoli")!
+]
+
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     let veggieNames: [String] = [
-        "carrot",
-        "cabbage",
-        "egg",
-        "peas",
-        "potato",
-        "cauliflower",
-        "broccoli"
+        "Carrot",
+        "Brussel Sprout",
+        "Egg",
+        "Peas",
+        "Potato",
+        "Cauliflower",
+        "Broccoli"
+    ]
+    
+    let veggieTimes: [Int] = [
+        1, 2, 3, 4, 5, 6, 7
     ]
     
     override func viewDidLoad() {
@@ -37,7 +52,13 @@ class HomeViewController: UIViewController {
             let ivc = segue.destination as! InfoViewController
             if let cell = sender as? UICollectionViewCell, let indexPath = self.collectionView.indexPath(for: cell){
                 let veggieName = veggieNames[indexPath.row]
+                let veggieTime = veggieTimes[indexPath.row]
+                let veggieImage = veggieImages[indexPath.row]
+
                 ivc.veggieName = veggieName
+                ivc.veggieTime = veggieTime
+                ivc.veggieImage = veggieImage
+                
             }
         }
     }
@@ -52,15 +73,6 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VeggieCell", for: indexPath) as! VeggieCell
         
-        let veggieImages: [UIImage] = [
-            UIImage(named: "carrot")!,
-            UIImage(named: "cabbage")!,
-            UIImage(named: "egg")!,
-            UIImage(named: "peas")!,
-            UIImage(named: "potato")!,
-            UIImage(named: "cauliflower")!,
-            UIImage(named: "broccoli")!
-            ]
         
        // let image = UIImage(named: veggieImages[indexPath.row])
         let image = veggieImages[indexPath.row]

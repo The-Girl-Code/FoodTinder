@@ -14,13 +14,13 @@ class InfoViewController: UIViewController {
     
     var veggieName = "ug"
     var veggieImage: UIImage!
-    var veggieTime = 0
+    var veggieTime: Int = 0
     
     @IBOutlet weak var veggieImageView: UIImageView!
     
     @IBOutlet weak var veggieLabel: UILabel!
     
-    var seconds = 60
+    var seconds: Int = 0
     var timer = Timer()
     var isTimerRunning = false
     var resumeTapped = false
@@ -63,7 +63,7 @@ class InfoViewController: UIViewController {
     
     @IBAction func resetButton(_ sender: UIButton) {
         timer.invalidate()
-        seconds = 60
+        seconds = veggieTime * 60
         timerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
         pauseButton.setTitle("Pause", for: .normal)
@@ -87,7 +87,10 @@ class InfoViewController: UIViewController {
         veggieImageView.image = veggieImage
         veggieLabel.text = veggieName
         print(veggieName)
+        seconds = veggieTime * 60
         pauseButton.isEnabled = false
+        timerLabel.text = timeString(time: TimeInterval(seconds))
+
     }
     
 }
