@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     ]
     
     let veggieTimes: [Int] = [
-        1, 2, 3, 4, 5, 6, 7
+        7, 5, 12, 2, 15, 6, 4
     ]
     
     override func viewDidLoad() {

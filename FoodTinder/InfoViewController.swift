@@ -54,8 +54,10 @@ class InfoViewController: UIViewController {
             timer.invalidate()
             self.resumeTapped = true
             self.pauseButton.setTitle("Resume",for: .normal)
+
         } else {
             runTimer()
+            isTimerRunning = true
             self.resumeTapped = false
             self.pauseButton.setTitle("Pause", for: .normal)
         }
@@ -67,6 +69,7 @@ class InfoViewController: UIViewController {
         timerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
         pauseButton.setTitle("Pause", for: .normal)
+        self.resumeTapped = false
         startButton.isEnabled = true
         pauseButton.isEnabled = false
     }
